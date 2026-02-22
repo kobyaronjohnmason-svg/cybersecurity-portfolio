@@ -1,0 +1,22 @@
+FTP (Port 21)
+
+Service:
+- vsFTPd 2.3.4
+
+Access:
+- Anonymous login: ENABLED
+  - Successfully authenticated using username "anonymous"
+  - This is a misconfiguration and considered a security risk
+
+Directory Listing:
+- Directory listing returned successfully but contained no files
+- No readable or downloadable content exposed
+
+Nmap Script Scan:
+- Full ftp* script scan completed
+- ftp-bounce: Not vulnerable (server returned "500 Illegal PORT command")
+- No additional FTP vulnerabilities discovered by NSE scripts
+
+Evidence Collected:
+- Screenshot of anonymous login and empty directory listing
+- ftp_script_scan.txt (saved in evidence/ftp/)

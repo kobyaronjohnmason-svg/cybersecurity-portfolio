@@ -1,0 +1,41 @@
+# Nmap 7.95 scan initiated Sun Feb 22 01:31:28 2026 as: /usr/lib/nmap/nmap -p21 --script ftp* -oN ftp_script_scan.txt 192.168.56.104
+Nmap scan report for 192.168.56.104
+Host is up (0.0042s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-brute: 
+|   Accounts: 
+|     user:user - Valid credentials
+|_  Statistics: Performed 2991 guesses in 603 seconds, average tps: 4.9
+| ftp-vsftpd-backdoor: 
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2011-2523  BID:48539
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       https://www.securityfocus.com/bid/48539
+|       https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.56.102
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+MAC Address: 08:00:27:70:9B:4A (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sun Feb 22 01:41:31 2026 -- 1 IP address (1 host up) scanned in 603.12 seconds
