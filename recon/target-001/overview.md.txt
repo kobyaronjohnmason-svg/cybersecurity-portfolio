@@ -1,0 +1,11 @@
+Target 001 – Recon Overview
+
+Target Information
+- IP Address: 192.168.56.104
+- Host Type: Metasploitable 2 (intentionally vulnerable Linux VM)
+- Objective: Perform structured service enumeration and collect evidence for each open port.
+
+Tools Used
+- Nmap (port scanning + service enumeration)
+- FTP client (manual enumeration)
+- Kali Linux utilities (file management, screenshots)
